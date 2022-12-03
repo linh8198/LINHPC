@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <input type="number" id="soNhap">
+    <button type="button" id="button" onclick="ham()">OK</button>
+
+    <script>
+       function ham(){
+        let b;
+        let j;
+        let soNhap=parseInt(document.getElementById('soNhap').value) ;
+        for(j=1; j<soNhap; j++){
+            let a=true;
+            for(let i=2; i<j; i++){
+            if(j%i==0){
+                a=false;
+            }
+            
+        }
+        if(a==true){
+                b+=j+'<br>';
+            }
+        }
+        
+        document.getElementById('demo').innerHTML=b;
+       }
+    </script>
+    
+</body>
+
+</html>
